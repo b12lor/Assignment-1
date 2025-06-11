@@ -1,85 +1,156 @@
-html{
-    background-image: url('images/Garden\ image.jpeg');
+/* My custom color variables using :root */
+:root {
+  --primary-color: #595fb1; 
+  --secondary-color: #676b6b; 
+  --text-color: #333; 
+  --background-color: #6bf193; 
+  --border-color: #eef5fc;
 }
 
+/*background image for entire page */
+html {
+  background-image: url('images/Css\ garden\ background.jpeg');
+  background-size: cover;
+  background-position: center;
+}
+
+/* styling my h3 headings with an imported font */
+h3 {
+  font-family: "Dancing Script", cursive;
+  font-style: bold;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  text-decoration: underline;
+  text-align: center;
+}
+
+/* styling the whole body of the page */
 body {
-    background-color: #6bf193; /* light background for contrast */
-    font-family: 'Open Sans', sans-serif;
-    color: #333; /* dark text for readability */
-    margin: 15px 15px 8px 15px; /* consistent margin */
-    padding: 2px 0px; /* padding for better spacing */
-    line-height: 1.4; /* improved readability */
-    font-size: 16px; /* base font size */
-    border : 2px solid #363fc0; /* subtle border for definition */
-    border-radius: 6px; /* rounded corners for a modern look */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* soft shadow for depth */
+  background-color: var(--background-color);
+  font-family: 'Open Sans', sans-serif;
+  color: var(--text-color);
+  margin: 0.9rem 0.9rem 0.5rem 1rem; /* added this for spacing around the body */
+  padding: 1.9rem 3rem; /* added this for inner spacing */
+  line-height: 1.4; /* make the text easier to read */
+  font-size: 1rem; /* set base font size */
+  border: 0.1rem solid #363fc0; /* add a border around body */
+  border-radius: 1rem; /* round the corners */
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1); 
+  margin: 2rem;
 }
 
+/* styles for the main page heading */
+section > header > h1 {
+  font-size: 2rem;
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
 
+/* styles for the list in the sidebar */
 aside > div > ul {
   list-style: none;
   margin: 2rem auto;
-  max-width: 800px;
-  background: #eef5fc; /* subtle header-like base */
-  border: 2px solid #c8d7e0;
-  border-radius: 6px;
+  max-width: 60%;
+  background: var(--background-color);
+  border: 0.1rem solid var(--border-color);
+  border-radius: 0.3rem;
   font-family: 'Open Sans', sans-serif;
   overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.05);
 }
 
-/* Row styling with alternating stripes */
+/* style ffor each list item */
 aside > div > ul > li {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.75rem 1rem;
-  border-bottom: 1px solid #c8d7e0;
+  padding: 0.7rem 1rem;
+  border-bottom: 0.1rem solid #c8d7e0;
   background: #fff;
-  transition: background-color 0.3s ease;
+  transition: var(--background-color) 0.3s ease;
 }
 
-/* Even row color */
-aside > div > ul > li:nth-child(even) {
-  background: #f6faff;
+/* styling for the odd list items */
+aside > div ul > li:nth-of-type(odd) {
+  background-color: var(--secondary-color);
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-radius: 5px;
 }
 
-/* Remove bottom border on last row */
+/* mstyling for the even list items */
+aside > div ul > li:nth-of-type(even) {
+  background-color: var(--primary-color);
+  padding: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-radius: 5px;
+}
+
+/* remove the bottom border from the last item */
 aside > div > ul > li:last-child {
   border-bottom: none;
 }
 
-/* Hover highlight */
+/* add a hover effect to list items */
 aside > div > ul > li:hover {
   background: #dcedfa;
   cursor: pointer;
 }
 
-/* Rounded corners for first and last items */
+/* round the top corners of the first list item */
 aside > div > ul > li:first-child {
-  border-top-left-radius: 6px;
-  border-top-right-radius: 6px;
-}
-aside > div > ul > li:last-child {
-  border-bottom-left-radius: 6px;
-  border-bottom-right-radius: 6px;
+  border-top-left-radius: 0.3rem;
+  border-top-right-radius: 0.3rem;
 }
 
-/* Clear link styling */
+/* round the bottom corners of the last list item */
+aside > div > ul > li:last-child {
+  border-bottom-left-radius: 0.3rem;
+  border-bottom-right-radius: 0.3rem;
+}
+
+/* style all my links with this color */
+a {
+  color: #333;
+}
+
+/* added a color for the links when hovered */
+a:hover {
+  color: #d0fd09;
+}
+
+/* i styled the links using the class id,and added color,font weight */
 .design-name {
-  color: #01579b;
+  color: #333;
   font-weight: 600;
   text-decoration: none;
 }
 
+/* i Style links with class of designer-name */
 .designer-name {
-  color: #455a64;
+  color: #0ca5ec;
   font-style: italic;
   text-decoration: none;
 }
 
-/* Link hover */
+/* add underline when hovering over both name links */
 .design-name:hover,
 .designer-name:hover {
   text-decoration: underline;
+}
+
+
+/* styling my footer area */
+footer {
+  text-align: center;
+  background-color: var(--secondary-color);
+  padding: 1rem;
+}
+
+/* style links inside the footer */
+footer a {
+  padding-left: 1rem;
+  font-size: 1.2rem;
+  text-decoration: none;
 }
