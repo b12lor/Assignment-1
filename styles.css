@@ -1,0 +1,85 @@
+html{
+    background-image: url('images/Garden\ image.jpeg');
+}
+
+body {
+    background-color: #6bf193; /* light background for contrast */
+    font-family: 'Open Sans', sans-serif;
+    color: #333; /* dark text for readability */
+    margin: 15px 15px 8px 15px; /* consistent margin */
+    padding: 2px 0px; /* padding for better spacing */
+    line-height: 1.4; /* improved readability */
+    font-size: 16px; /* base font size */
+    border : 2px solid #363fc0; /* subtle border for definition */
+    border-radius: 6px; /* rounded corners for a modern look */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* soft shadow for depth */
+}
+
+
+aside > div > ul {
+  list-style: none;
+  margin: 2rem auto;
+  max-width: 800px;
+  background: #eef5fc; /* subtle header-like base */
+  border: 2px solid #c8d7e0;
+  border-radius: 6px;
+  font-family: 'Open Sans', sans-serif;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
+
+/* Row styling with alternating stripes */
+aside > div > ul > li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #c8d7e0;
+  background: #fff;
+  transition: background-color 0.3s ease;
+}
+
+/* Even row color */
+aside > div > ul > li:nth-child(even) {
+  background: #f6faff;
+}
+
+/* Remove bottom border on last row */
+aside > div > ul > li:last-child {
+  border-bottom: none;
+}
+
+/* Hover highlight */
+aside > div > ul > li:hover {
+  background: #dcedfa;
+  cursor: pointer;
+}
+
+/* Rounded corners for first and last items */
+aside > div > ul > li:first-child {
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+aside > div > ul > li:last-child {
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+/* Clear link styling */
+.design-name {
+  color: #01579b;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.designer-name {
+  color: #455a64;
+  font-style: italic;
+  text-decoration: none;
+}
+
+/* Link hover */
+.design-name:hover,
+.designer-name:hover {
+  text-decoration: underline;
+}
