@@ -1,0 +1,99 @@
+
+body{
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    color: #333;
+    border: 1px solid #ccc;
+    padding: 20px;            
+    margin: 0 auto;
+    max-width: 800px;
+    
+}
+
+a:hover {
+    color: green;
+    text-decoration: underline;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #e0f7fa, #ffffff);
+  color: #222;
+}
+
+/* --- CLASS SELECTOR --- */
+.profile-card {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+}
+
+/* --- ID SELECTOR --- */
+#main-title {
+  font-family: 'Lobster', cursive;
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: #00796b;
+}
+
+/* --- ATTRIBUTE SELECTOR --- */
+a[href^="http"] {
+  text-decoration: none;
+  color: #0288d1;
+}
+
+/* --- PSEUDO-CLASS SELECTOR --- */
+a:hover {
+  color: #004d40;
+  text-decoration: underline;
+}
+
+/* --- PSEUDO-ELEMENT SELECTOR --- */
+p::first-line {
+  font-weight: bold;
+}
+
+/* --- DESCENDANT COMBINATOR --- */
+.profile-card p span {
+  font-style: italic;
+}
+
+/* --- CHILD COMBINATOR --- */
+.profile-card > img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+}
+
+/* --- DIRECT SIBLING COMBINATOR --- */
+h2 + p {
+  margin-top: 5px;
+  font-size: 1.1em;
+}
+
+/* --- GENERAL SIBLING COMBINATOR --- */
+h2 ~ p {
+  margin-bottom: 10px;
+}
+
+/* --- BOX MODEL DEMONSTRATION --- */
+.container {
+  padding: 20px;
+  margin: 30px;
+  border: 2px solid #ccc;
+}
+
+/* --- CREATIVE EFFECT --- */
+img:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease-in-out;
+  filter: brightness(1.1);
+}
+
+/* --- CUSTOM FONTS --- */
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Roboto&display=swap');
